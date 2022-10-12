@@ -1,0 +1,29 @@
+plugins:
+  - jest
+
+env:
+  node: true
+  es2020: true
+
+parserOptions:
+  ecmaVersion: 11
+  sourceType: module
+
+settings:
+  import/resolver:
+    node:
+      paths:
+        - .
+
+extends:
+  - airbnb
+  - next
+  - next/core-web-vitals
+  - "plugin:jest/recommended"
+
+rules:
+  max-len: 0
+  import/extensions: 0 # FIXME: remove when rule will be adjusted for new nodejs version
+  no-underscore-dangle: [2, { "allow": ["__filename", "__dirname"] }]
+  jsx-a11y/anchor-is-valid: 0
+  react/function-component-definition: 0
