@@ -11,7 +11,7 @@ publish:
 	npm publish --dry-run
 
 update:
-	npm link
+	sudo npm link
 
 lint:
 	npx eslint
